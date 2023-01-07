@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+<h1>cool csv file display</h1>
+  
+<table>
+    <tr>
+        {% for x in header %}
+    <th>{{x}}</th>
+  {% endfor %}
+    </tr>
+    {% for detail in details %}
+    <tr>
+        {% for y in detail %}
+        <td>{{y}}</td> 
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
